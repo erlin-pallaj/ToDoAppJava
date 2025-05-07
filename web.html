@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Modern Responsive Website</title>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #ffec99;
+  }
+  header {
+    background-color: rgba(0,0,0,0.25);
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    user-select: none;
+  }
+  nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  nav a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  main {
+    flex: 1;
+    padding: 20px 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  }
+  p.lead {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 440px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  section.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 480px) {
+    section.features {
+      grid-template-columns: 1fr;
+    }
+  }
+  .feature-box {
+    background: rgba(255 255 255 / 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+  }
+  .feature-box:hover {
+    background: rgba(255 255 255 / 0.25);
+    transform: translateY(-5px);
+  }
+  .feature-box h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .feature-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  footer {
+    background-color: rgba(0,0,0,0.35);
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    user-select: none;
+    box-shadow: inset 0 1px 0 #fff6;
+  }
+  button.cta-btn {
+    display: block;
+    background: #ffd700;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 40px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgb(255 215 0 / 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+  button.cta-btn:hover, button.cta-btn:focus {
+    box-shadow: 0 8px 25px rgb(255 215 0 / 0.7);
+    outline: none;
+  }
+  .message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 24px;
+    color: #ffeb3b;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+<header>
+  My Cool Website
+</header>
+<nav>
+  <a href="#home" tabindex="1">Home</a>
+  <a href="#features" tabindex="2">Features</a>
+  <a href="#about" tabindex="3">About</a>
+  <a href="#contact" tabindex="4">Contact</a>
+</nav>
+<main>
+  <section id="home" role="region" aria-label="Home Section">
+    <h1>Welcome to My Cool Website</h1>
+    <p class="lead">This is a modern, responsive website designed with elegance and simplicity in mind. Enjoy smooth navigation and a clean, fresh look!</p>
+    <button class="cta-btn" id="actionBtn" aria-label="Click to show message">Click Me!</button>
+    <div class="message" id="msgArea" aria-live="polite" aria-atomic="true"></div>
+  </section>
+  <section id="features" class="features" role="region" aria-label="Features Section">
+    <div class="feature-box" tabindex="0">
+      <h2>Responsive Design</h2>
+      <p>Optimized for all devices, from phones to desktops. The layout adjusts smoothly to your screen size.</p>
+    </div>
+    <div class="feature-box" tabindex="0">
+      <h2>Modern UI</h2>
+      <p>Clean and attractive design with engaging animations and accessibility-friendly features.</p>
+    </div>
+    <div class="feature-box" tabindex="0">
+      <h2>Easy Navigation</h2>
+      <p>A clear, intuitive navigation menu helps you find what you need quickly and effortlessly.</p>
+    </div>
+    <div class="feature-box" tabindex="0">
+      <h2>Interactive Elements</h2>
+      <p>Interactive buttons and smooth feedback animations make your visit engaging and fun.</p>
+    </div>
+  </section>
+  <section id="about" role="region" aria-label="About Section">
+    <h2>About Us</h2>
+    <p>We create beautiful, user-friendly websites with a focus on performance, accessibility, and aesthetics. Your satisfaction and great experience is our priority.</p>
+  </section>
+  <section id="contact" role="region" aria-label="Contact Section">
+    <h2>Contact</h2>
+    <p>Reach out anytime! Send us an email or connect on social media.</p>
+    <p>Email: <a href="mailto:contact@coolwebsite.com" tabindex="5">erlinpallaj@gmail.com</a></p>
+  </section>
+</main>
+<footer>
+  &copy; 2025 My Cool Website. All Rights Reserved.
+</footer>
+<script>
+  const actionBtn = document.getElementById('actionBtn');
+  const msgArea = document.getElementById('msgArea');
+
+  actionBtn.addEventListener('click', () => {
+    msgArea.textContent = "Thanks for clicking! Enjoy exploring the site.";
+    actionBtn.disabled = true;
+    actionBtn.textContent = "Clicked!";
+    setTimeout(() => {
+      msgArea.textContent = "";
+      actionBtn.disabled = false;
+      actionBtn.textContent = "Click Me!";
+    }, 4000);
+  });
+</script>
+</body>
+</html>
+</content>
+</create_file>
